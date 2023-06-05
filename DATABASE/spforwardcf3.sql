@@ -60,8 +60,12 @@ CREATE TABLE `tb_diagnosa` (
 --
 
 INSERT INTO `tb_diagnosa` (`id`, `kode_diagnosa`, `nama_diagnosa`, `solusi`, `penyebab`, `gambar`, `merk`) VALUES
-(1, 'P001', 'Hama Kutu Daun', '', '', '',''),
-(2, 'P002', '', '', '', '',''),
+(1, 'P001', 'Hama Kutu Daun (Aphid)', 'Aphid dapat menjadi vektor virus sehingga harus dikendalikan dengan rutin menyemprotkan insektisida berbahan aktif Abamectin atau Profenofos secara berkala.', 'Hama aphid atau kutu kebul menyerang stroberi dengan menghisap sari daun muda. Gejala yang terjadi yaitu timbul bercak serbuk kehitaman dan kondisi daun pucuk kurang besar.', 'aphid.PNG','curacron.jpg'),
+(2, 'P002', 'Hama Ulat', 'Pengendalian hama ulat bisa dengan rutin menyemprotkan insektisida dengan bahan aktif Emamektin benzoat atau Deltametrin.', 'Biasanya terjadi di awal musim hujan, kupu-kupu bertelur pada sela-sela daun kemudian menjadi ulat. Gejala yang terjadi yaitu daun berlubang dan terkadang memakan buah muda ataupun buah yang siap panen. ', 'ulat.png','siklon.jpg'),
+(3, 'P003', 'Kutu Thrips', 'Pengendalian dapat dilakukan rutin setiap minggu dengan melakukan penyemprotan insektisida berbahan aktif Abamectin.', 'Kutu ini menyerang stroberi di awal musim panas maupun penghujan. Gejala yang terjadi yaitu terdapat perubahan pada warna daun menjadi kecoklatan, daun keriting, buah berwarna hijau kecoklatan', 'thrips.jpg','demolish.jpg'),
+(4, 'P004', 'Spider Mites', 'Pengendalian dilakukan dengan rutin membasahi bawah daun stroberi dengan sprayer bertekanan tinggi setiap tiga hari sekali, melakukanpenyemprotan Akarisida berbahan aktif Piridaben atau penyemprotan berbahan aktif Sulfur pada sore menjelang malam hari.', 'Sering ditemukan pada stroberi yang ditanam dalam greenhouse, hama ini menyukai lingkungan panas dengan tingkat kelembaban rendah. Gejala yang timbul yaitu daun menguning, pada pinggiran daun terdapat seperti sarang laba-laba.', 'spider.jpg','samite.jpg'),
+(5, 'P005', 'Cendawan Powdery Mildew', 'Pengendalian secara kimiawi untuk hama ini yaitu dengan menyemprotkan fungisida berbahan aktif Dritazol, Metoksi Aklirat atau Difenokonazol.', 'Menyerang jenis stroberi yang memiliki buah manis dan dibudidayakan dalam greenhouse dengan kelebaban rendah. Ciri dari cendawan ini yaitu memiliki hifa atau bercak berwarna putih, dapat menyerang buah, daun, batang. Jika sudah parah, menimbulkan bercak ungu pada daun.', 'powder.jpg','score.png'),
+(6, 'P006', 'Cendawan Botrytis', 'Pencegahan dapat dilakukan dengan menghindari daun terlalu basah, dan pengendalian kimiawi dilakukan dengan penyemprotan kombinasi insektisida Amistar dan Score.', 'Pencegahan dapat dilakukan dengan menghindari daun terlalu basah, dan pengendalian kimiawi dilakukan dengan penyemprotan kombinasi insektisida Amistar dan Score', 'bort.jpg','gabung.jpg');
 
 -- --------------------------------------------------------
 
@@ -82,8 +86,27 @@ CREATE TABLE `tb_gejala` (
 --
 
 INSERT INTO `tb_gejala` (`id`, `kode_gejala`, `nama_gejala`, `keterangan`, `gambar`) VALUES
-(3, 'G01', 'daun layu', '', 'test.jpg'),
-(12, 'G03', 'test', '', 'Lighthouse.jpg');
+(13, 'G001', 'terdapat bercak kehitaman pada daun', '', 'g1 Terdapat bercak serbuk kehitaman.png'),
+(14, 'G002', 'ukuran pucuk kecil', '', 'g2 Pucuk kecil.png'),
+(15, 'G003', 'daun menggulung atau mengkerut', '', 'g3 Daun menggulung mengkerut.jpg'),
+(16, 'G004', 'daun keriting', '', 'g4 Daun keriting.jpg'),
+(18, 'G006', 'terdapat daun berlubang', '', 'g6 daun berlubang.jpg'),
+(19, 'G007', 'terdapat bekas gigitan pada buah', '', 'g7 bekas gigitan pada buah.jpg'),
+(20, 'G008', 'terdapat daun yang tampak transparan', '', 'g8 daun nampak transparan.jpg'),
+(21, 'G009', 'terdapat daun yang berwarna kecoklatan', '', 'g9 daun kecoklatan.png'),
+(22, 'G010', 'warna buah hijau kecoklatan', '', 'g10 buah hijau kecoklatan.png'),
+(23, 'G011', 'terdapat bercak putih pada daun', '', 'g11 bercak putih pada daun.jpg'),
+(24, 'G012', 'terdapat daun yang menguning', '', 'g12 daun menguning.jpg'),
+(25, 'G013', 'buah berukuran kecil', '', 'g13 buah berukuran kecil.jpg'),
+(26, 'G014', 'biji stroberi menghitam', '', 'g14 biji stroberi menghitam.PNG'),
+(27, 'G015', 'daun pucuk mengalami gundul', '', 'g15 pucuk daun gundul.jpg'),
+(28, 'G016', 'terdapat jaring laba-laba pada pinggiran daun', '', 'g16 jaring laba pada daun.jpg'),
+(29, 'G017', 'terdapat bercak ungu pada daun', '', 'g17 bercak ungu pada daun.jpg'),
+(30, 'G018', 'terdapat hifa putih seperti tepung pada daun atau buah', '', 'g18 hifa putih pada daun buah.PNG'),
+(31, 'G019', 'terdapat busuk basah pada buah', '', 'g19 busuk basah pada buah.jpg'),
+(32, 'G020', 'terdapat busuk kering pada daun', '', 'g20 busuk kering pada daun.jpg'),
+(33, 'G021', 'buah mengering kecoklatan', '', 'g21 buah mengering kecoklatan.jpg'),
+(34, 'G005', 'pembentukan buat terhambat', '', 'g5 pembentukan buah terhambat.png');
 
 -- --------------------------------------------------------
 
@@ -107,26 +130,9 @@ CREATE TABLE `tb_hasil` (
 --
 
 INSERT INTO `tb_hasil` (`id`, `nama`, `email`, `jk`, `alamat`, `tgl`, `hasil_konsultasi`, `kepercayaan`) VALUES
-(40, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(41, '', '', '', '', '0000-00-00', '', 'Positif'),
-(42, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(43, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(44, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(45, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(46, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(47, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(48, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(49, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(50, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(51, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(52, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(53, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(54, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(55, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(56, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(57, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(58, '', '', '', '', '0000-00-00', 'semut', 'Positif'),
-(59, '', '', '', '', '0000-00-00', 'semut', 'Positif');
+(40, '', '', '', '', '0000-00-00', '', 'Positif'),
+(41, '', '', '', '', '0000-00-00', '', 'Positif');
+
 
 -- --------------------------------------------------------
 
@@ -145,9 +151,9 @@ CREATE TABLE `tb_konsultasi` (
 --
 
 INSERT INTO `tb_konsultasi` (`id`, `kode_gejala`, `jawaban`) VALUES
-(14, 'G01', 'Ya'),
-(15, 'G03', 'Ya'),
-(16, '', 'Ya');
+(1, 'G001', 'Ya'),
+(2, 'G003', 'Ya'),
+(3, 'G008', 'Ya');
 
 -- --------------------------------------------------------
 
@@ -168,8 +174,31 @@ CREATE TABLE `tb_relasi` (
 --
 
 INSERT INTO `tb_relasi` (`ID`, `kode_diagnosa`, `kode_gejala`, `mb`, `md`) VALUES
-(9, 'P001', 'G01', 'tes', 'tes'),
-(11, 'P003', 'G03', 'tes', 'tes');
+(12, 'P001', 'G001', '1', '0.01'),
+(13, 'P001', 'G002', '1', '0.03'),
+(14, 'P001', 'G003', '0.8', '0.03'),
+(15, 'P001', 'G004', '0.8', '0.04'),
+(18, 'P002', 'G007', '1', '0.02'),
+(19, 'P002', 'G008', '1', '0.04'),
+(20, 'P001', 'G005', '0.8', '0.01'),
+(21, 'P002', 'G006', '1', '0.02'),
+(22, 'P003', 'G003', '0.8', '0.03'),
+(23, 'P003', 'G004', '0.8', '0.04'),
+(24, 'P003', 'G009', '1', '0.02'),
+(25, 'P003', 'G010', '1', '0.02'),
+(26, 'P003', 'G011', '0.8', '0.02'),
+(27, 'P003', 'G013', '1', '0.03'),
+(28, 'P003', 'G012', '0.8', '0.04'),
+(29, 'P003', 'G014', '1', '0.04'),
+(30, 'P004', 'G011', '0.8', '0.02'),
+(31, 'P004', 'G012', '0.8', '0.04'),
+(32, 'P004', 'G015', '1', '0.02'),
+(33, 'P004', 'G016', '1', '0.01'),
+(34, 'P005', 'G004', '0.8', '0.04'),
+(35, 'P005', 'G012', '0.8', '0.04'),
+(36, 'P005', 'G017', '1', '0.01'),
+(37, 'P005', 'G018', '1', '0.01'),
+(38, 'P006', 'G019', '1', '0.01');
 
 --
 -- Indexes for dumped tables
